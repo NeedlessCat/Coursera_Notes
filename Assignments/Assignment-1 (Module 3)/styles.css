@@ -1,0 +1,58 @@
+/***Base Style***/
+*{
+	box-sizing:border-box;
+}
+h1{
+	margin-bottom:30px;
+	text-align: center;
+}
+
+p{
+	border:3px solid black;
+	background-color: #D3D3D3;
+	width:90%;
+	height:150px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: right;
+	font-family: Helvetica;
+	color: white;
+}
+mark{
+	color: black;
+	border: 3px solid black;
+}
+/**Responsive Framework**/
+.row{
+	width:100%;
+}
+
+/**For Large Devices**/
+@media(min-width:992px)
+{
+	.col-lg-4
+	{
+		float:left;
+		width:33.33%;
+	}
+}
+/**For Medium Devices**/
+@media(min-width:768px) and (max-width:991px)
+{
+	.col-md-6
+	{
+		float:left;
+		width:50%;
+	}
+	.col-md-1
+	{
+		float: left;
+		width:100%;
+	}
+
+}
+/**For Small Devices**/
+/*@media(max-width:767px) 
+{
+
+}*/
