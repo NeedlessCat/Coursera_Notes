@@ -57,6 +57,7 @@ console.log(value);
 console.log(" ");
 console.log("------------NEXT LECTURE NOTES---------");
 console.log(" ");
+
 //Working of 'this'.......
 function test()
 {
@@ -65,10 +66,14 @@ function test()
 }
 test();
 console.log(window.myName);
-//Other ways to create functions and objects....
+
+
+//Generating Function Constructors....
 function Circle(radius)
 {
-	console.log(this);
+	console.log(this);  //At first, it points 'Window' but creating new Obj let it point to the function/constructor itself.
+	//return {}; --> Note Function Constructor can't have any return value.**
+	
 	this.getArea = function() {
 		return Math.PI * Math.pow(this.radius,2);
 	};
@@ -101,7 +106,7 @@ console.log("------------NEXT LECTURE NOTES---------");
 console.log(" ");
 
 //Object literals and "this"....
-var literalCicle ={
+var literalCicle = { //new Object()
 	radius: 10,
 	getArea: function() {
 		var self = this;
@@ -111,6 +116,8 @@ var literalCicle ={
 			//this.radius = 20;
 			self.radius = 20;
 		};
+		//a function inside an object have 'this' pointing to object but inner function has 'this' pointing to 'window' again.
+		//to resolve it, we store 'this' into an var 'self'.
 		increaseRadius();
 		console.log(this.radius);
 //Above increaseRadius() will not work unless 'var self' is generated.

@@ -50,6 +50,8 @@ document.querySelector("button")
 
 function sayHello() {
 	//console.log(this); -->Used to just check the pointing value.
+	//					 -->at first, it points to window.
+	//					 -->after using '.addEventListener(..., sayHello), it points to button'
 	//If we want to change the text in button then...
 	this.textContent = "Said it!";
 	
@@ -70,7 +72,7 @@ function sayHello() {
 		.querySelector("#title")
 		.textContent = title;
 	}
-}
+};
 
 //Unobstrusive Event Binding....
 document.querySelector("button")

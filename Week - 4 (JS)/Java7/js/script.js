@@ -55,6 +55,7 @@ for (var name in names2)
 {
 	console.log("Hello " + names2[name]);
 }
+//Here we see, greeting also become a property of the array(not different than others)..
 
 //Closures....
 function makeMultiplier (multiplier){
